@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+<head>
+  <!-- Tags de configuracion de la página -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metodos de Números Aleatorios</title>
+  <!-- Cargar las dependencias y los estilos -->
+  <script src="js/libs/modernizr-2.6.2.min.js"></script>
+  <!-- Se utiliza un framework de estilos llamado Groundwork -->
+  <link type="text/css" rel="stylesheet" href="css/groundwork.css">
+</head>
+
+<body>
+  <!-- Titulo en letras grandes -->
+  <h2 class='pad-top pad-left'>Generadores de Números Aleatorios</h2>
+  <div class="tabs ipad">
+    <ul role="tablist">
+      <li role="tab" aria-controls="#tab1">Cuadrado Medio</li>
+      <li role="tab" aria-controls="#tab2">Operación Residuo</li>
+      <li role="tab" aria-controls="#tab3">Congruncia Lineal</li>
+      <li role="tab" aria-controls="#tab4">Acerca</li>
+    </ul>
+    <div id="tab1" role="tabpanel">
+      <!-- Parte del metodo del cuadrado medio -->
+      <div class="row double-pad-left">
+        <h3>Método del Cuadrado Medio</h3>
+        <div class='inline-block '>
+          <label for="semilla">Semilla</label>
+          <input class='inline-block' type="number" name="semilla" min="1000" max="9999" value='1234'>
+        </div>
+        <div class='inline-block pad-left'>
+          <label for="tamano">Tamaño</label>
+          <input class='inline-block' type="number" name="tamano" min="1" max="6" value='4'>
+        </div>
+        <div class='inline-block pad-left'>
+          <label for="iteraciones">Iteraciones</label>
+          <input class='inline-block' type="number" name="iteraciones" min="1" max="100" value='10'>
+        </div>
+        <button id='generar1' class='pad-left blue'>Generar</button>
+        <br>
+        <div id='cuadrados' class='inline-block'>Presiona 'Generar'</div>
+        <br>
+        <br>
+      </div>
+    </div>
+    <div id="tab2" role="tabpanel">
+      <!-- Parte del metodo del metodo de Operación Residuo -->
+      <div class="row double-pad-left">
+        <h3>Método de Operación Residuo</h3>
+        <div class='inline-block '>
+          <label for="dividendo">Dividendo</label>
+          <input class='inline-block' type="number" name="dividendo" min="1" max="999" value='545'>
+        </div>
+        <div class='inline-block pad-left'>
+          <label for="divisor">Divisor</label>
+          <input class='inline-block' type="number" name="divisor" min="0" max="999" value='10'>
+        </div>
+        <button id='generar2' class='red pad-left'>Generar</button>
+        <br>
+        <div id='residuo' class='inline-block'>Presiona 'Generar'</div>
+        <br>
+        <br>
+      </div>
+    </div>
+    <div id="tab3" role="tabpanel">
+      <!-- Parte del metodo del metodo de congruencia lineal -->
+      <div class="row double-pad-left">
+        <h3>Método de Congruencia Lineal</h3>
+        <div class='inline-block '>
+          <label for="modulo">Módulo</label>
+          <input class='inline-block' type="number" name="modulo" min="1" max="999" value='100'>
+        </div>
+        <div class='inline-block pad-left'>
+          <label for="multiplicador">Multiplicador</label>
+          <input class='inline-block' type="number" name="multiplicador" min="0" max="999" value='13'>
+        </div>
+        <div class='inline-block pad-left'>
+          <label for="corrimiento">Corrimiento</label>
+          <input class='inline-block' type="number" name="corrimiento" min="0" max="999" value='29'>
+        </div>
+        <div class='inline-block pad-left'>
+          <label for="sem">Semilla</label>
+          <input class='inline-block' type="number" name="sem" min="0" max="999" value='52'>
+        </div>
+        <div class='inline-block pad-left'>
+          <label for="iter">Iteraciones</label>
+          <input class='inline-block' type="number" name="iter" min="1" max="100" value='10'>
+        </div>
+        <button id='generar3' class='yellow pad-left'>Generar</button>
+        <br>
+        <div id='congruencia' class='inline-block'>Presiona 'Generar'</div>
+        <br>
+        <br>
+      </div>
+    </div>
+    <div id="tab4" role="tabpanel">
+      <div class="row double-pad-left">
+        <h3>Acerca de</h3>
+        <div class='pad-left'>
+          <p>Guadalupe Fernanda Ibarra</p>
+          <p>Beatriz Athzari Salazar</p>
+          <p>Antonio de Jesús Corpus</p>
+          <p>Carlos Santisteban Pozas</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+
+
+  <!-- Scripts de dependencias externas -->
+  <script type="text/javascript" src="js/libs/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/groundwork.all.js"></script>
+  <!-- Script principal de nuestro programa -->
+  <script type="text/javascript" src='code.js'></script>
+</body>
+
+</html>
